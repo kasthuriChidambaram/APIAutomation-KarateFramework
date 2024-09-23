@@ -35,7 +35,7 @@ pipeline {
             steps {
                 // Publish Cucumber report in Jenkins from the APIAutomation-KarateFramework directory
                 cucumber buildStatus: 'FAILURE',
-                          fileIncludePattern: '**/APIAutomation-KarateFramework/target/*.json',
+                          fileIncludePattern: '**/APIAutomation-KarateFramework/target/karate-reports/res/*.json',
                           sortingMethod: 'ALPHABETICAL'
             }
         }
