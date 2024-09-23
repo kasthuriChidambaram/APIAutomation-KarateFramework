@@ -31,14 +31,6 @@ pipeline {
             }
         }
 
-        stage('Publish Test Results') {
-            steps {
-                // Publish Cucumber report in Jenkins from the APIAutomation-KarateFramework directory
-                cucumber buildStatus: 'FAILURE',
-                          fileIncludePattern: '**/APIAutomation-KarateFramework/target/karate-reports/res/*.json',
-                          sortingMethod: 'ALPHABETICAL'
-            }
-        }
 
         stage('Archive Test Results') {
             steps {
